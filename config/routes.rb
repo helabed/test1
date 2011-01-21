@@ -1,5 +1,9 @@
 Test1::Application.routes.draw do
-  resources :users
+  resources :players do as_routes end
+
+  resources :teams do as_routes end
+
+  resources :users do as_routes end
 
   match "/say/hello" => "say#hello"
   match "/say/goodbye" => "say#goodbye"
