@@ -13,5 +13,17 @@
     = active_scaffold_includes
     = csrf_meta_tag
   %body
-
-    = yield
+    #wrapper
+      #top
+        .main_navigation
+          =link_to "Home", '/'
+          |
+          =link_to "Players", :controller => :players
+          |
+          =link_to "Teams", :controller => :teams
+          |
+          =link_to "Users", :controller => :users
+      #content
+        #stuff
+          %br
+          = yield
